@@ -57,24 +57,34 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
             <div class="content">
                 <div class="title m-b-md">
-                    Pizzas!
+                    Pizza List
                 </div>
+
+                <!-- initialiser, condition, increment -->
+                <!-- @for($i = 0; $i < 5; $i++)
+                <p>the vaue of i is {{ $i }}</p>
+                @endfor -->
+
+                <!-- @for($i = 0; $i < count($pizzas); $i++)
+                <p>{{ $pizzas[$i]['type']}}</p>
+                @endfor -->
+
+                @foreach($pizzas as $pizza)
+                <div>
+                {{ $loop->index }} {{ $pizza['type'] }} - {{ $pizza['base'] }}
+                @if($loop->first)
+                <span>- first in the loop</span>
+                @endif
+                @if($loop->last)
+                <span>- last in the loop</span>
+                @endif
+                </div>
+
+                @endforeach
+
+
             </div>
         </div>
     </body>

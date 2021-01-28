@@ -18,5 +18,13 @@ Route::get('/', function () {
 });
 
 Route::get('/pizzas', function () {
-    return view('pizzas');
+    // get data from the db then pass that data as an array into the view
+
+    $pizzas = [
+        ['type' => 'hawaiian', 'base' => 'cheesy crust'],
+        ['type' => 'volcano', 'base' => 'puff crust'],
+        ['type' => 'meat lovers', 'base' => 'thin crust'],
+    ];
+
+    return view('pizzas', ['pizzas' => $pizzas]);
 });
