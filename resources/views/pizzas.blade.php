@@ -73,8 +73,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Pizza House <br/>
-                    Welcome Home
+                    Pizzas!
                 </div>
             </div>
         </div>
