@@ -7,6 +7,7 @@
             Pizza List
         </div>
 
+
         <!-- initialiser, condition, increment -->
         <!-- @for($i = 0; $i < 5; $i++)
         <p>the vaue of i is {{ $i }}</p>
